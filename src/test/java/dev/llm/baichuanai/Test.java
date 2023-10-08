@@ -1,13 +1,13 @@
-# baichuanai-java-sdk
-调用百川大模型的Java SDK。目前仅支持同步和异步调用，不支持流式调用。
-# 使用代码参考
+package dev.llm.baichuanai;
 
-执行代码前需要在先执行
-<br>
-export BAICHUANAI_API_KEY=[your baichuanai api key]
-export BAICHUANAI_SECRET_KEY=[your baichuanai secret key]
+import static java.time.Duration.ofSeconds;
+import static java.util.concurrent.TimeUnit.SECONDS;
 
-```
+import java.util.concurrent.CompletableFuture;
+
+import dev.llm.baichuanai.chat.ChatCompletionRequest;
+
+
 public class Test {
 
         public static void main(String[] args) throws Exception {
@@ -42,4 +42,3 @@ public class Test {
                 client.shutdown();
         }
 }
-```
